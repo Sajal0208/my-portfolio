@@ -2,12 +2,13 @@ import React from 'react'
 import styled from 'styled-components'
 import {NavLink} from 'react-router-dom'
 import avatar from '../img/1621100337552.jpeg'
+import { Link } from "react-router-dom";
 
 function Navigation() {
     return (
         <NavigationStyled>
             <div className = "avatar">
-                <img src={avatar} alt = "AvatarImage"/>
+                <Link to = "/home"> <img src={avatar} alt = "AvatarImage"/> </Link>
             </div>
             <ul className = "nav-items">
                 <li className = "nav-item">

@@ -1,0 +1,24 @@
+{
+  "workExperience": {
+    "pCoderWork": [
+      "Responsible for API design and development of RESTful Services for the enterprise product in the business.",
+      "Currently Developing an in-house web app using NodeJs, MongoDB ExpressJs and JWT for Authentication.",
+      "Worked as a React Developer in some project and made responsive UI's for the clients",
+      "Used: JavaScript (Node & React), HTML/CSS, AWS, MongoDB, JWT, Git."
+    ]
+  },
+  "projects": {
+    "projectWingMeals": [
+      "A Zomato/Swiggy like Web Application which allows customer to add or remove items from their cart",
+      "Made a responsive UI using ReactJs and applied dynamic styling to improve User Experience."
+    ],
+    "expenseTracker": [
+      "A ReactJs application where users can add or track their expenses and can filter them year-wise.",
+      "Added a Chart Bar to make UI and UX better. It tracks down monthly expenses and fill it up based on the users monthly expenditure."
+    ]
+  },
+  "education": {
+    "college": ["GPA: 9.15"],
+    "school": ["Percentage: 93.2%"]
+  }
+}

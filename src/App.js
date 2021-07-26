@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import Sidebar from "./Components/Sidebar";
 import HomePage from "./Pages/HomePage";
-import { Route, Switch } from "react-router";
+import { Route, Switch, Redirect } from "react-router";
 import AboutPage from '../src/Pages/AboutPage'
 import ResumePage from '../src/Pages/ResumePage'
 import BlogsPage from '../src/Pages/BlogsPage'
@@ -20,22 +20,25 @@ function App() {
           <div className="line-4"></div>
         </div>
         <Switch>
-          <Route path = '/home'>
+          <Route exact path = '/'>
+            <Redirect to = '/home'/>
+          </Route>
+          <Route exact path = '/home'>
             <HomePage/>
           </Route>
-          <Route path = '/about'>
+          <Route exact path = '/about'>
             <AboutPage/>
           </Route>
-          <Route path = '/resume'>
+          <Route exact path = '/resume'>
             <ResumePage/>
           </Route>
-          <Route path = '/portfolio'>
+          <Route exact path = '/portfolios'>
             <PortfolioPage/>
           </Route>
-          <Route path = '/blogs'>
+          <Route exact path = '/blogs'>
             <BlogsPage/>
           </Route>
-          <Route path = '/contact'>
+          <Route exact path = '/contact'>
             <ContactPage/>
           </Route>
         </Switch>
