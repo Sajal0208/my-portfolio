@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { MainLayout, InnerLayout } from "../styles/Layout";
 import styled from "styled-components";
 import Title from "../Components/Title";
 import PrimaryButton from "../Components/PrimaryButton";
 import PhoneIcon from "@material-ui/icons/Phone";
 import EmailIcon from "@material-ui/icons/Email";
+import axios from "axios";
 import LocationOnIcon from "@material-ui/icons/LocationOn";
 import ContactItem from "../Components/ContactItem";
 
@@ -12,6 +13,97 @@ const ContactPage = () => {
   const phone = <PhoneIcon />;
   const email = <EmailIcon />;
   const location = <LocationOnIcon />;
+
+  const [input, setInput] = useState({
+    fName: "",
+    emailyo: "",
+    contact: "",
+    subject: "",
+    message: "",
+  });
+
+  const formSubmitHandler = (e) => {
+    e.preventDefault();
+    const data = {
+      name: input.fName,
+      email: input.emailyo,
+      contact: input.contact,
+      subject: input.subject,
+      message: input.message,
+    };
+    const sendingData = JSON.stringify(data);
+    axios
+      .post(
+        "https://portfolio-website-560f4-default-rtdb.firebaseio.com/contact.json",
+        {
+          sendingData,
+        }
+      )
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((e) => {
+        console.log(e);
+      });
+
+    setInput({
+      fName: "",
+      emailyo: "",
+      contact: "",
+      subject: "",
+      message: "",
+    });
+  };
+
+  const inputEvent = (e) => {
+    const value = e.target.value;
+    const name = e.target.name;
+
+    setInput((preValue) => {
+      if (name === "fName") {
+        return {
+          fName: value,
+          emailyo: preValue.emailyo,
+          contact: preValue.contact,
+          subject: preValue.subject,
+          message: preValue.message,
+        };
+      } else if (name === "emailyo") {
+        return {
+          fName: preValue.fName,
+          emailyo: value,
+          contact: preValue.contact,
+          subject: preValue.subject,
+          message: preValue.message,
+        };
+      } else if (name === "contact") {
+        return {
+          fName: preValue.fName,
+          emailyo: preValue.emailyo,
+          contact: value,
+          subject: preValue.subject,
+          message: preValue.message,
+        };
+      } else if (name === "subject") {
+        return {
+          fName: preValue.fName,
+          emailyo: preValue.emailyo,
+          contact: preValue.contact,
+          subject: value,
+          message: preValue.message,
+        };
+      } else if (name === "message") {
+        return {
+          fName: preValue.fName,
+          emailyo: preValue.emailyo,
+          contact: preValue.contact,
+          subject: preValue.subject,
+          message: value,
+        };
+      }
+    });
+  };
+
   return (
     <MainLayout>
       <Title title={"Contact"} span={"Contact"} />
@@ -21,7 +113,7 @@ const ContactPage = () => {
             <div className="contact-title">
               <h4>Get In Touch</h4>
             </div>
-            <form className="form">
+            <form className="form" onSubmit={formSubmitHandler}>
               <div className="form-field">
                 <label htmlFor="name">Enter Your Name</label>
                 <input
@@ -29,7 +121,10 @@ const ContactPage = () => {
                   type="text"
                   id="name"
                   required
+                  name="fName"
                   placeholder="Name"
+                  onChange={inputEvent}
+                  value={input.fName}
                 />
               </div>
               <div className="form-field">
@@ -38,8 +133,11 @@ const ContactPage = () => {
                   autoComplete="off"
                   type="text"
                   id="email"
+                  name="emailyo"
                   required
                   placeholder="Email"
+                  onChange={inputEvent}
+                  value={input.emailyo}
                 />
               </div>
               <div className="form-field form-contact">
@@ -50,8 +148,11 @@ const ContactPage = () => {
                   placeholder="Phone"
                   id="phone"
                   required
+                  name="contact"
                   minLength="10"
                   maxLength="10"
+                  onChange={inputEvent}
+                  value={input.contact}
                 />
               </div>
               <div className="form-field">
@@ -61,9 +162,12 @@ const ContactPage = () => {
                 <input
                   autoComplete="off"
                   type="text"
+                  name="subject"
                   id="subject"
                   placeholder="Subject"
                   required
+                  onChange={inputEvent}
+                  value={input.subject}
                 />
               </div>
               <div className="form-field">
@@ -73,12 +177,20 @@ const ContactPage = () => {
                   id="textarea"
                   cols="30"
                   placeholder="Message..."
+                  name="message"
                   rows="10"
+                  onChange={inputEvent}
                   required
+                  value={input.message}
                 ></textarea>
               </div>
-              <div className="form-field">
-                <PrimaryButton className={"form-button"} title={"Send Email"} />
+              <div className="form-field f-button">
+                <button className={"submit-button"} type="submit">
+                  <PrimaryButton
+                    className={"form-button"}
+                    title={"Send Email"}
+                  />
+                </button>
               </div>
             </form>
           </div>
@@ -167,6 +279,10 @@ const ContactPageStyled = styled.section`
           color: inherit;
           width: 100%;
           padding: 0.8rem 1rem;
+        }
+        .submit-button {
+          outline: none;
+          border: none;
         }
       }
       .form-contact {

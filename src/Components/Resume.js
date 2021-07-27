@@ -63,7 +63,7 @@ function Resume() {
             )}
             {isLoading && <p>Loading...</p>}
           </div>
-          <div className="small-title">
+          <div className="small-title u-small-title-margin">
             <SmallTitle icon={school} title={"Education"} />
           </div>
           <div className="resume-content">

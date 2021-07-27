@@ -11,7 +11,7 @@ const portfolios = [
         category: 'ReactJs',
         image: portfolioWebsite,
         link1: 'https://github.com/Sajal0208/my-portfolio',
-        link2: 'https://www.google.com',
+        link2: '',
         title: 'My Portfolio Website',
         text: 'Created Using React Js'
     },
@@ -20,7 +20,7 @@ const portfolios = [
         category: 'NodeJs',
         image: chatApp,
         link1: 'https://github.com/Sajal0208/chat-app',
-        link2: 'https://www.google.com',
+        link2: 'https://chat-app-so-io.herokuapp.com/',
         title: 'Chat App',
         text: 'Created Using NodeJs and Socket.io'
     },
