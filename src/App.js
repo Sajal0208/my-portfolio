@@ -75,7 +75,7 @@ function App() {
         >
           <Switching>
             <Route exact path="/">
-              <Redirect to="/home" />
+              <HomePage />
             </Route>
             <Route exact path="/home">
               <HomePage />
