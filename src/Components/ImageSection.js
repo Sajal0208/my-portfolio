@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import resume from "../img/Screenshot 2021-07-21 052426.png";
+import resume from "../img/SAJ.png";
 import PrimaryButton from "../Components/PrimaryButton";
 
 const ImageSection = () => {
@@ -33,7 +33,7 @@ const ImageSection = () => {
             <p>: MERN Developer</p>
           </div>
         </div>
-        <a href = "https://www.youtube.com/" target = '_blank'><PrimaryButton title={"Download CV"} /></a>
+        <a href = "https://drive.google.com/file/d/1hMaQ96ndkpbRd0SCvvOJYg2OwVPQPqtV/view?usp=sharing" target = '_blank'><PrimaryButton title={"Download CV"} /></a>
       </div>
     </ImageSectionStyled>
   );
