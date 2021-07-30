@@ -33,7 +33,7 @@ const ImageSection = () => {
             <p>: MERN Developer</p>
           </div>
         </div>
-        <a href = "https://drive.google.com/file/d/1hMaQ96ndkpbRd0SCvvOJYg2OwVPQPqtV/view?usp=sharing" target = '_blank'><PrimaryButton title={"Download CV"} /></a>
+        <a href = "https://drive.google.com/file/d/1yJNAQnapG8KoFDgcvIzzM2mXfj3di2iQ/view?usp=sharing" target = '_blank'><PrimaryButton title={"Download CV"} /></a>
       </div>
     </ImageSectionStyled>
   );
