@@ -8,34 +8,54 @@ import SchoolIcon from "@material-ui/icons/School";
 import ResumeItem from "./ResumeItem";
 import axios from "axios";
 
+const pCoderWork = [
+  "Responsible for API design and development of RESTful Services for the enterprise product in the business.",
+  "Currently Developing an in-house web app using NodeJs, MongoDB ExpressJs and JWT for Authentication.",
+  "Worked as a React Developer in some project and made responsive UI's for the clients",
+  "Used: JavaScript (Node & React), HTML/CSS, AWS, MongoDB, JWT, Git."
+]
+
+const education = {
+  "college": ["GPA: 9.15"],
+  "school": ["Percentage: 93.2%"]
+}
+
 function Resume() {
   const [PCoder, setPCoder] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [gpa, setGpa] = useState([]);
-  const [percentage , setPercentage] = useState([])
+  const [percentage, setPercentage] = useState([]);
 
   const fetchMoviesHandler = () => {
+  // If not using firebase
     setIsLoading(true);
-    axios
-      .get(
-        "https://portfolio-website-560f4-default-rtdb.firebaseio.com/.json",
-        {
-          headers: { "Access-Control-Allow-Origin": "*" },
-        }
-      )
-      .then((res) => {
-        const data = res.data;
-        return data;
-      })
-      .then((data) => {
-        setPCoder(data.workExperience.pCoderWork);
-        setGpa(data.education.college);
-        setPercentage(data.education.school)
-        setIsLoading(false);
-      })
-      .then((err) => {
-        return err;
-      });
+    setPCoder(pCoderWork);
+    setGpa(education.college)
+    setPercentage(education.school);
+    setIsLoading(false);
+
+  // If using firebase
+
+    // axios
+    //   .get(
+    //     "https://portfolio-website-560f4-default-rtdb.firebaseio.com/.json",
+    //     {
+    //       headers: { "Access-Control-Allow-Origin": "*" },
+    //     }
+    //   )
+    //   .then((res) => {
+    //     const data = res.data;
+    //     return data;
+    //   })
+    //   .then((data) => {
+    //     setPCoder(data.workExperience.pCoderWork);
+    //     setGpa(data.education.college);
+    //     setPercentage(data.education.school);
+    //     setIsLoading(false);
+    //   })
+    //   .then((err) => {
+    //     return err;
+    //   });
   };
 
   useEffect(() => {
@@ -84,7 +104,6 @@ function Resume() {
                 text={percentage}
               />
             )}
-     
           </div>
         </InnerLayout>
       </ResumeStyled>
