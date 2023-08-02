@@ -1,9 +1,19 @@
 import React from "react";
 import styled from "styled-components";
-import resume from "../img/SAJ.png";
+import resume from "../img/SAJAL.png";
 import PrimaryButton from "../Components/PrimaryButton";
 
 const ImageSection = () => {
+  
+  const calculate_age = () => {
+    const my_dob = new Date('07/02/2002')
+    var month_diff = Date.now() - my_dob.getTime();
+    var age_dt = new Date(month_diff);
+    var year = age_dt.getUTCFullYear();
+    var age = Math.abs(year - 1970);
+    return age
+  }
+
   return (
     <ImageSectionStyled>
       <div className="left-content">
@@ -26,14 +36,14 @@ const ImageSection = () => {
           </div>
           <div className="info">
             <p>: Sajal Dewangan</p>
-            <p>: 18</p>
+            <p>: {calculate_age()}</p>
             <p>: Indian</p>
             <p>: English/Hindi</p>
             <p>: Raipur, India</p>
-            <p>: MERN Developer</p>
+            <p>: Full-Stack Developer</p>
           </div>
         </div>
-        <a href = "https://drive.google.com/file/d/1yJNAQnapG8KoFDgcvIzzM2mXfj3di2iQ/view?usp=sharing" target = '_blank'><PrimaryButton title={"Download CV"} /></a>
+        <a href = "https://drive.google.com/file/d/1Loa3H7lF9RvM5zoetS_-eAHoK3W7R-Hb/view?usp=sharing" target = '_blank'><PrimaryButton title={"Download CV"} /></a>
       </div>
     </ImageSectionStyled>
   );

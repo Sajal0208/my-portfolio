@@ -18,25 +18,7 @@ const TitleStyled = styled.div`
         text-transform: uppercase;
         position: relative;
         padding-bottom: 0.7rem;
-        &::before{
-            content: "";
-            position: absolute;
-            bottom: 0;
-            width: 7.4rem;
-            height: .33rem;
-            background-color: var(--background-light-color-2);
-            border-radius: 15px;
-        }
-        &::after{
-            content: "";
-            position: absolute;
-            bottom: 0;
-            width: 3.4rem;
-            height: .33rem;
-            background-color: var(--primary-color);
-            border-radius: 15px;
-            left: 0;
-        }
+        
         span{
             font-weight: 900;
             color: rgba(25,29,43,.44);
@@ -50,3 +32,23 @@ const TitleStyled = styled.div`
 `
 
 export default Title
+
+// &::before{
+//     content: "";
+//     position: absolute;
+//     bottom: 0;
+//     width: 7.4rem;
+//     height: .33rem;
+//     background-color: var(--background-light-color-2);
+//     border-radius: 15px;
+// }
+// &::after{
+//     content: "";
+//     position: absolute;
+//     bottom: 0;
+//     width: 3.4rem;
+//     height: .33rem;
+//     background-color: var(--primary-color);
+//     border-radius: 15px;
+//     left: 0;
+// }

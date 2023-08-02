@@ -18,31 +18,32 @@ const HomePage = () => {
           I am currently an undergrad student majoring in Computer Science and
           Engineering. I am very passionate about building futuristic
           technologies.
-        </p>
+        </p>   
         <div className="icons">
-          <a
-            href="https://leetcode.com/_godLike1000/"
-            target="_blank"
-            className="icon i-leetcode"
-          >
-            <CodeIcon />
-          </a>
-          <a
-            href="https://github.com/Sajal0208"
-            target="_blank"
-            className="icon i-github"
-          >
-            <GitHub />
-          </a>
-          <a
-            href="https://www.linkedin.com/in/sajaldewangan/"
-            target="_blank"
-            className="icon i-linkedin"
-          >
-            <LinkedIn />
-          </a>
+            <a
+              href="https://leetcode.com/_godLike1000/"
+              target="_blank"
+              className="icon i-leetcode"
+            >
+              <CodeIcon />
+            </a>
+            <a
+              href="https://github.com/Sajal0208"
+              target="_blank"
+              className="icon i-github"
+            >
+              <GitHub />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/sajaldewangan/"
+              target="_blank"
+              className="icon i-linkedin"
+            >
+              <LinkedIn />
+            </a>
         </div>
       </div>
+     
     </HomePageStyled>
   );
 };
@@ -50,7 +51,10 @@ const HomePage = () => {
 const HomePageStyled = styled.header`
   width: 100%;
   height: 100vh;
-  position: relative;
+  display : flex;
+  align-items : center;
+  justify-content : center;
+  flex-direction : column;
 
   .p-particles-js {
     position: absolute;
@@ -65,12 +69,18 @@ const HomePageStyled = styled.header`
     transform: translate(-50%, -50%);
     text-align: center;
     width: 80%;
+    display : flex;
+    justify-content : center;
+    flex-direction : column;
+    align-items: center;
   }
 
   .icons {
     display: flex;
     justify-content: center;
-    margin-top: 1rem;
+    align-items: center;
+    margin-top: 2rem;
+    
     .icon {
       border: 2px solid var(--border-color);
       display: flex;

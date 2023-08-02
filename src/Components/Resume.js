@@ -8,6 +8,13 @@ import SchoolIcon from "@material-ui/icons/School";
 import ResumeItem from "./ResumeItem";
 import axios from "axios";
 
+const metaficWork = [
+  "Implemented websites, and landing pages from concept through deployment.",
+  "Assessed UX and UI designs for technical feasibility.",
+  "Standardized all output with a new, responsive, approach and strategy.",
+  "Used: Typescript (ReactJs), HTML/CSS, Jest and Enzyme for testing, Git."
+]
+
 const pCoderWork = [
   "Responsible for API design and development of RESTful Services for the enterprise product in the business.",
   "Currently Developing an in-house web app using NodeJs, MongoDB ExpressJs and JWT for Authentication.",
@@ -73,6 +80,14 @@ function Resume() {
             <SmallTitle icon={briefcase} title={"Working Experience"} />
           </div>
           <div className="resume-content">
+            {!isLoading && (
+              <ResumeItem
+                year={"Nov 2021 - Aug 2022"}
+                title={"Software Engineer"}
+                subtitle={"Metafic"}
+                text={metaficWork}
+              />
+            )}
             {!isLoading && (
               <ResumeItem
                 year={"Jun 2021 - Jul 2021"}

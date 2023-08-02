@@ -209,8 +209,7 @@ const ContactPage = () => {
             />
             <ContactItem
               title={"Address"}
-              icon={location}
-              cont1={"2118, Kota, Raipur, Chhattisgarh"}
+              icon={location} 
               cont2={"India"}
             />
           </div>
