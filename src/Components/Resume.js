@@ -23,7 +23,7 @@ const pCoderWork = [
 ]
 
 const education = {
-  "college": ["GPA: 9.15"],
+  "college": ["GPA: 8.24"],
   "school": ["Percentage: 93.2%"]
 }
 
@@ -40,29 +40,6 @@ function Resume() {
     setGpa(education.college)
     setPercentage(education.school);
     setIsLoading(false);
-
-  // If using firebase
-
-    // axios
-    //   .get(
-    //     "https://portfolio-website-560f4-default-rtdb.firebaseio.com/.json",
-    //     {
-    //       headers: { "Access-Control-Allow-Origin": "*" },
-    //     }
-    //   )
-    //   .then((res) => {
-    //     const data = res.data;
-    //     return data;
-    //   })
-    //   .then((data) => {
-    //     setPCoder(data.workExperience.pCoderWork);
-    //     setGpa(data.education.college);
-    //     setPercentage(data.education.school);
-    //     setIsLoading(false);
-    //   })
-    //   .then((err) => {
-    //     return err;
-    //   });
   };
 
   useEffect(() => {

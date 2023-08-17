@@ -6,6 +6,7 @@ import expenseTracker from '../img/portImages/expenseTracker.png'
 import todoApp from '../img/portImages/todoApp.png'
 import solvequest from '../img/solvequest.png'
 import integrateio from '../img/integrate.io.png'
+import parkit from '../img/ParkIt.png'
 
 const portfolios = [
     {
@@ -16,6 +17,15 @@ const portfolios = [
         link2: 'https://solve-quest.vercel.app/',
         title: 'solve-quest',
         text: 'Developed a web application to provide a coding practice platform akin to LeetCode.'
+    },
+    {
+        id: 9,
+        category: 'Full-Stack',
+        image: parkit,
+        link1: 'https://github.com/Sajal0208/ParkIt-Frontend',
+        link2: '',
+        title: 'ParkIt',
+        text: 'A parking lot management system that allows users to book parking slots in advance.'
     },
     {
         id: 8,
