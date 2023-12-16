@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import resume from "../img/SAJAL.png";
+import resume from "../img/Sajal_Dewangan_Resume.png";
 import PrimaryButton from "../Components/PrimaryButton";
 
 const ImageSection = () => {
@@ -32,18 +32,18 @@ const ImageSection = () => {
             <p>Nationality</p>
             <p>Languages</p>
             <p>Location</p>
-            <p>Service</p>
+            <p>Role</p>
           </div>
           <div className="info">
             <p>: Sajal Dewangan</p>
             <p>: {calculate_age()}</p>
             <p>: Indian</p>
             <p>: English/Hindi</p>
-            <p>: Raipur, India</p>
+            <p>: India</p>
             <p>: Full-Stack Developer</p>
           </div>
         </div>
-        <a href = "https://drive.google.com/file/d/1Loa3H7lF9RvM5zoetS_-eAHoK3W7R-Hb/view?usp=sharing" target = '_blank'><PrimaryButton title={"Download CV"} /></a>
+        <a href = "https://drive.google.com/file/d/1sqG1cm3V0N_nI9xEK45RwBMfXwm9C4Y6/view?usp=sharing" target = '_blank'><PrimaryButton title={"Download CV"} /></a>
       </div>
     </ImageSectionStyled>
   );
