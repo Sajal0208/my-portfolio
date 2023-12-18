@@ -7,8 +7,28 @@ import todoApp from '../img/portImages/todoApp.png'
 import solvequest from '../img/solvequest.png'
 import integrateio from '../img/integrate.io.png'
 import parkit from '../img/ParkIt.png'
+import streamify from '../img/streamify.png'
+import chatify from '../img/chatify.png'
 
 const portfolios = [
+    {
+        id: 10,
+        category: 'tRPC',
+        image: streamify,
+        link1: 'https://github.com/Sajal0208/solve-quest',
+        link2: 'https://streamify-sajal0208.vercel.app/',
+        title: 'Streamify',
+        text: 'Developed a feature-rich platform enabling users to upload, like, and dislike videos, enhancing the overall content discovery and user engagement.'
+    },
+    {
+        id: 11,
+        category: 'Full-Stack',
+        image: chatify,
+        link1: 'https://github.com/Sajal0208/chatify',
+        link2: '',
+        title: 'Chatify',
+        text: 'Developed a video-calling application using raw WebRTC implementation, providing users with a seamless and immersive real-time communication experience.'
+    },
     {
         id: 1,
         category: 'Full-Stack',
