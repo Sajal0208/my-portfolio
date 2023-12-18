@@ -10,8 +10,7 @@ const BlogsPage = () => {
       <BlogsStyled>
         <Title title={"Blogs"} span={"Blogs"} />
         <InnerLayout className={"blog"}>
-          <h1>Coming Soon</h1>
-          {/* {blogs.map((blog) => {
+          {blogs.map((blog) => {
             return (
               <div key={blog.id} className={"blog-item"}>
                 <div className="image">
@@ -22,7 +21,7 @@ const BlogsPage = () => {
                 </div>
               </div>
             );
-          })} */}
+          })}
         </InnerLayout>
       </BlogsStyled>
     </MainLayout>

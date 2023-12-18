@@ -1,45 +1,23 @@
-import blog1 from  '../img/blogs/blog1.svg';
-import blog3 from  '../img/blogs/blog3.svg';
-import blog2 from  '../img/blogs/blog2.svg';
-import blog4 from  '../img/blogs/blog4.svg';
+import blog1 from  '../img/blogs/Node_TS.png';
+import blog2 from  '../img/blogs/Auth_Blog.png';
  
 const blogs = [
     {
         id: 1,
-        title: 'How To Work from Home',
+        title: 'Authentication using cookies with JWT in ExpressJs',
         date: '01',
         month: 'April',
-        image: blog1
+        image: blog1,
+        link: 'https://medium.com/@sajaldewangan/authentication-using-cookies-with-jwt-in-expressjs-900467c3b8d3'
     },
     {
         id: 2,
-        title: 'How To Use SEO Efficiently',
+        title: 'Basic Template using NodeJs, Typescript',
         date: '01',
         month: 'April',
-        image: blog2
+        image: blog2,
+        link: 'https://medium.com/@sajaldewangan/basic-template-using-nodejs-typescript-9e74d2dbb42b'
     },
-    {
-        id: 3,
-        title: 'How to choose a programming Language',
-        date: '01',
-        month: 'April',
-        image: blog3,
-        link: 'https://www.google.co.uk/'
-    },
-    {
-        id: 4,
-        title: 'How To Tse SEO Efficiently',
-        date: '01',
-        month: 'April',
-        image: blog4
-    },
-    {
-        id: 5,
-        title: 'How To Tse SEO Efficiently',
-        date: '01',
-        month: 'April',
-        image: blog4
-    }
 ]
 
 export default blogs;
